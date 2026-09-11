@@ -2,8 +2,8 @@
   "version": 2,
   "framework": "vite",
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "NODE_ENV=production pnpm --filter @workspace/ab-customs-storefront run build",
-  "outputDirectory": "artifacts/ab-customs-storefront/dist",
+  "buildCommand": "NODE_ENV=production pnpm --filter @workspace/ab-customs-storefront run build && rm -rf dist && mkdir -p dist && cp -R artifacts/ab-customs-storefront/dist/. dist/",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
